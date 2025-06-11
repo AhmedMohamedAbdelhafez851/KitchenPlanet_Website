@@ -1,0 +1,266 @@
+body {
+    font-family: 'Cairo', sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background-color: #F7F7F7;
+}
+
+.navbar-brand img {
+    height: 50px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    padding: 0.5rem 1.5rem;
+    color: #FFFFFF;
+}
+
+.hero-section {
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-slide {
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.category-card {
+    display: block;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    color: white;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+    .category-card i {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+
+    .category-card.pharmacy {
+        background: linear-gradient(45deg, #4CAF50, #45a049);
+    }
+
+    .category-card.kitchen {
+        background: linear-gradient(45deg, #FF5722, #f4511e);
+    }
+
+    .category-card:hover {
+        transform: translateY(-10px);
+        text-decoration: none;
+    }
+
+.offer-card {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+    .offer-card img {
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .offer-card:hover {
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.hero-swiper {
+    height: 80vh;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-content {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 15px;
+    color: #FFFFFF;
+    animation: slideIn 1s ease-out;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+    .portfolio-item:hover {
+        transform: translateY(-5px);
+    }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: bounce 2s infinite;
+    transition: transform 0.3s ease;
+}
+
+    .whatsapp-btn i {
+        color: #FFFFFF;
+        font-size: 28px;
+    }
+
+    .whatsapp-btn:hover {
+        transform: scale(1.1);
+        animation: none;
+    }
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Slider Navigation and Animation */
+.swiper-button-next, .swiper-button-prev {
+    color: #FFFFFF;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+    .swiper-button-next:hover, .swiper-button-prev:hover {
+        background: #25D366;
+    }
+
+.swiper-slide-active .slide-content h1 {
+    animation: fadeInLeft 1s ease-out;
+}
+
+.swiper-slide-active .slide-content p {
+    animation: fadeInRight 1s ease-out 0.2s;
+}
+
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 60vh;
+    }
+
+    .hero-swiper {
+        height: 60vh;
+    }
+
+    .whatsapp-btn {
+        bottom: 10px;
+        left: 10px;
+        width: 50px;
+        height: 50px;
+    }
+
+        .whatsapp-btn i {
+            font-size: 24px;
+        }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        height: 50vh;
+    }
+
+    .hero-swiper {
+        height: 50vh;
+    }
+
+    .whatsapp-btn {
+        bottom: 5px;
+        left: 5px;
+        width: 40px;
+        height: 40px;
+    }
+
+        .whatsapp-btn i {
+            font-size: 20px;
+        }
+}

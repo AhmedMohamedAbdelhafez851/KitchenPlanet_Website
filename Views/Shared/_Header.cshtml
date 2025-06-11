@@ -1,0 +1,36 @@
+﻿<header class="main-header">
+    <nav class="navbar">
+        <a href="@Url.Action("Index", "Home")" class="logo" aria-label="Planet Kitchen Home">
+            <img src="@Url.Content("~/images/icons/generated-image.png")" class="logo-img" alt="Planet Kitchen Logo">
+        </a>
+
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" role="navigation">
+            <li><a href="@Url.Action("Index", "Home")" class="nav-link active" aria-current="page">الرئيسية</a></li>
+            <li class="dropdown">
+                <a href="#" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                    خدماتنا <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu" role="menu">
+                    <a href="kitchens.html" class="dropdown-item">تصميم المطابخ</a>
+                    <a href="dressing-rooms.html" class="dropdown-item">الدريسنج روم</a>
+                    <a href="pharmacies.html" class="dropdown-item">تجهيز الصيدليات</a>
+                </div>
+            </li>
+            <li><a href="@Url.Action("About", "Home")" class="nav-link">من نحن</a></li>
+            <li><a href="contact.html" class="nav-link">اتصل بنا</a></li>
+        </ul>
+
+        <div class="social-icons">
+            <a href="https://www.facebook.com/PlanetKitchensPharmacies" target="_blank" aria-label="Follow us on Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://wa.me/1234567890" target="_blank" aria-label="Contact us on WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </nav>
+</header>

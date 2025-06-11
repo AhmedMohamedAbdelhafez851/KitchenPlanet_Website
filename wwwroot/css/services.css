@@ -1,0 +1,232 @@
+﻿.services {
+    padding: 6rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #F7FAFC 0%, #EDF2F7 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+    .services::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, rgba(29, 78, 216, 0.05) 0%, transparent 70%);
+        background-size: 600px 600px;
+        background-position: center;
+        opacity: 0.3;
+        z-index: 0;
+    }
+
+.section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+    position: relative;
+    z-index: 2;
+}
+
+    .section-header h2 {
+        font-size: 4rem;
+        color: #1A3C34;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+        font-family: 'Cairo', sans-serif;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        letter-spacing: 1.5px;
+    }
+
+    .section-header p {
+        font-size: 1.6rem;
+        color: #4A5568;
+        max-width: 800px;
+        margin: 0 auto;
+        font-family: 'Cairo', sans-serif;
+        font-weight: 400;
+    }
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.service-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .service-card:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+.service-content {
+    padding: 3rem;
+    text-align: center;
+    z-index: 2;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for text readability */
+}
+
+  /*  .service-content h3 {
+        font-size: 3rem;
+        color: #ffffff;
+        margin-bottom: 1.2rem;
+        font-weight: 700;
+        font-family: 'Cairo', sans-serif;
+        letter-spacing: 1px;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    }*/
+
+    .service-content p {
+        font-size: 1.5rem;
+        color: #ffffff;
+        line-height: 1.8;
+        font-family: 'Cairo', sans-serif;
+        font-weight: 400;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+.service-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease;
+    z-index: 1;
+}
+
+.service-card:hover .service-image {
+    transform: scale(1.1);
+}
+
+.logo-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #ffffff 0%, #1A3C34 60%, #1A202C 100%);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), inset -3px -3px 8px rgba(0, 0, 0, 0.2), inset 3px 3px 8px rgba(255, 255, 255, 0.5);
+    border: 2px solid #1A3C34;
+    z-index: 3;
+    transition: transform 0.4s ease;
+}
+
+    .logo-overlay:hover {
+        transform: scale(1.1);
+    }
+
+@media (max-width: 1024px) {
+    .services {
+        padding: 5rem 1.5rem;
+    }
+
+    .section-header h2 {
+        font-size: 3.5rem;
+    }
+
+    .section-header p {
+        font-size: 1.4rem;
+    }
+
+    .service-card {
+        height: 550px;
+    }
+
+    .service-content {
+        padding: 2.5rem;
+    }
+
+        .service-content h3 {
+            font-size: 2.6rem;
+        }
+
+        .service-content p {
+            font-size: 1.3rem;
+        }
+
+    .logo-overlay {
+        width: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services {
+        padding: 4rem 1.5rem;
+    }
+
+    .section-header h2 {
+        font-size: 3rem;
+    }
+
+    .section-header p {
+        font-size: 1.2rem;
+    }
+
+    .service-card {
+        height: 500px;
+    }
+
+    .service-content h3 {
+        font-size: 2.2rem;
+    }
+
+    .service-content p {
+        font-size: 1.2rem;
+    }
+
+    .logo-overlay {
+        width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services {
+        padding: 3rem 1rem;
+    }
+
+    .section-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .section-header p {
+        font-size: 1.1rem;
+    }
+
+    .service-card {
+        height: 450px;
+    }
+
+    .service-content h3 {
+        font-size: 2rem;
+    }
+
+    .service-content p {
+        font-size: 1rem;
+    }
+
+    .logo-overlay {
+        width: 70px;
+        top: 15px;
+        left: 15px;
+    }
+}

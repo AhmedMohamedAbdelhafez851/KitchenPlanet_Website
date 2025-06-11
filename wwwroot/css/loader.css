@@ -1,0 +1,82 @@
+﻿.loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1A202C; /* Dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.logo-preloader {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.planet-kitchen-logo {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 25px;
+    left: 25px;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 0 15px rgba(26, 60, 52, 0.8);
+}
+
+.revolving-dashes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation: rotate 2s linear infinite;
+}
+
+    .revolving-dashes::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 4px dashed #1A3C34; /* Dashed ring */
+        border-radius: 50%;
+        animation: dashFade 1.5s ease-in-out infinite;
+        box-shadow: 0 0 20px rgba(26, 60, 52, 0.6); /* Neon glow */
+    }
+
+    .revolving-dashes::after {
+        content: '';
+        position: absolute;
+        width: 80%;
+        height: 80%;
+        top: 10%;
+        left: 10%;
+        border: 3px dashed #1A3C34;
+        border-radius: 50%;
+        animation: rotate 2.5s linear infinite reverse, dashFade 1.8s ease-in-out infinite;
+        box-shadow: 0 0 15px rgba(26, 60, 52, 0.4);
+    }
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dashFade {
+    0%, 100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}

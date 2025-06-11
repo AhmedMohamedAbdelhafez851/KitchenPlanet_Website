@@ -1,0 +1,409 @@
+﻿.about {
+    padding: 8rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #f9e8d9, #fff);
+    overflow: hidden;
+}
+
+.about-hero {
+    text-align: center;
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #6d4c41, #f4a261);
+    color: #fff;
+    border-radius: 20px;
+    margin-bottom: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.brand-animation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.brand-arabic {
+    font-size: 4.5rem;
+    font-weight: 700;
+    font-family: 'Tajawal', sans-serif;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    animation: bounce 2s infinite;
+}
+
+.brand-english {
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    color: #f4a261;
+    margin-top: -1rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.hero-subtitle {
+    font-size: 1.6rem;
+    color: #fff;
+    margin-top: 1rem;
+    opacity: 0.9;
+    animation: fadeIn 2s ease-out;
+}
+
+.about-overview {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.overview-image {
+    flex: 1;
+    position: relative;
+}
+
+.overview-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    /* Convex Effect */
+    background: radial-gradient(circle at 30% 30%, #ffffff 0%, #f4a261 60%, #6d4c41 100%);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), /* Outer shadow for raised effect */
+    inset -3px -3px 8px rgba(0, 0, 0, 0.2), /* Inner shadow for depth */
+    inset 3px 3px 8px rgba(255, 255, 255, 0.5); /* Highlight for convex look */
+    border: 2px solid #f4a261;
+    z-index: 10;
+    transition: transform 0.3s ease;
+}
+
+    .logo-overlay:hover {
+        transform: scale(1.1);
+    }
+
+.overview-content {
+    flex: 1;
+}
+
+    .overview-content h2 {
+        font-size: 2.8rem;
+        color: #6d4c41;
+        margin-bottom: 1.5rem;
+        font-family: 'Tajawal', sans-serif;
+    }
+
+    .overview-content p {
+        font-size: 1.3rem;
+        color: #7a6a5e;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+    }
+
+.learn-more {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #f4a261;
+    color: #fff;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+    .learn-more:hover {
+        transform: translateY(-5px);
+        background: #6d4c41;
+    }
+
+.about-values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+}
+
+.value-card {
+    background: rgba(244, 162, 97, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid rgba(244, 162, 97, 0.3);
+}
+
+    .value-card:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .value-card i {
+        font-size: 3rem;
+        color: #f4a261;
+        margin-bottom: 1.5rem;
+    }
+
+    .value-card h3 {
+        font-size: 2rem;
+        color: #6d4c41;
+        margin-bottom: 1rem;
+        font-family: 'Tajawal', sans-serif;
+    }
+
+    .value-card p {
+        font-size: 1.2rem;
+        color: #7a6a5e;
+    }
+
+.about-team {
+    text-align: center;
+    padding: 4rem 0;
+    background: #fff;
+    border-radius: 20px;
+    margin-bottom: 4rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+    .about-team h2 {
+        font-size: 2.8rem;
+        color: #6d4c41;
+        margin-bottom: 3rem;
+        font-family: 'Tajawal', sans-serif;
+    }
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.team-member {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+    .team-member:hover {
+        transform: translateY(-10px);
+    }
+
+.member-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+    .member-image .logo-overlay {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 60px;
+        height: auto;
+        border-radius: 50%;
+        /* Convex Effect for Team Images */
+        background: radial-gradient(circle at 30% 30%, #ffffff 0%, #f4a261 60%, #6d4c41 100%);
+        box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3), /* Slightly smaller shadow for smaller logo */
+        inset -2px -2px 6px rgba(0, 0, 0, 0.2), inset 2px 2px 6px rgba(255, 255, 255, 0.5);
+        border: 2px solid #f4a261;
+        z-index: 10;
+        transition: transform 0.3s ease;
+    }
+
+        .member-image .logo-overlay:hover {
+            transform: scale(1.1);
+        }
+
+.team-member h4 {
+    font-size: 1.6rem;
+    color: #6d4c41;
+    margin: 1rem 0 0.5rem;
+}
+
+.team-member p {
+    font-size: 1.1rem;
+    color: #7a6a5e;
+    margin-bottom: 1rem;
+}
+
+.testimonial {
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #6d4c41;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(244, 162, 97, 0.1);
+    border-radius: 15px;
+}
+
+    .testimonial cite {
+        display: block;
+        margin-top: 1rem;
+        font-weight: 600;
+        color: #f4a261;
+    }
+
+.about-cta {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.cta-button {
+    background: linear-gradient(90deg, #6d4c41, #f4a261);
+    color: #fff;
+    padding: 1.5rem 3rem;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 10px 20px rgba(109, 76, 65, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+    .cta-button:hover {
+        transform: translateY(-10px) scale(1.05);
+        box-shadow: 0 15px 30px rgba(109, 76, 65, 0.4);
+    }
+
+@media (max-width: 1024px) {
+    .about-hero {
+        padding: 4rem 0;
+    }
+
+    .brand-arabic {
+        font-size: 3.5rem;
+    }
+
+    .brand-english {
+        font-size: 2.5rem;
+    }
+
+    .about-overview {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .overview-img {
+        height: 300px;
+    }
+
+    .value-card {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 6rem 1.5rem;
+    }
+
+    .brand-arabic {
+        font-size: 2.8rem;
+    }
+
+    .brand-english {
+        font-size: 2rem;
+    }
+
+    .overview-img {
+        height: 250px;
+    }
+
+    .overview-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .about-team h2 {
+        font-size: 2.2rem;
+    }
+
+    .cta-button {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero {
+        padding: 3rem 0;
+    }
+
+    .brand-arabic {
+        font-size: 2.2rem;
+    }
+
+    .brand-english {
+        font-size: 1.6rem;
+    }
+
+    .overview-img {
+        height: 200px;
+    }
+
+    .overview-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .value-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-15px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}

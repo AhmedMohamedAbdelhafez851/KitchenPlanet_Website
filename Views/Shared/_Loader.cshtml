@@ -1,0 +1,16 @@
+﻿<div class="loader-overlay" id="loader">
+    <div class="logo-preloader">
+        <img src="~/images/icons/327236174_885515266130623_3422278345492368891_n.jpg" alt="Planet Kitchen Logo" class="planet-kitchen-logo">
+        <div class="revolving-dashes"></div>
+    </div>
+</div>
+
+<script>
+    window.addEventListener('load', function() {
+        const loader = document.getElementById('loader');
+        loader.style.opacity = '0';
+        setTimeout(() => {
+            loader.style.display = 'none';
+        }, 500); // Fade out over 0.5 seconds
+    });
+</script>
